@@ -293,6 +293,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  align-self: stretch; /* карточки-расходники в ряду одинаковой высоты */
   gap: 16px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -310,6 +311,53 @@ a {
   max-height: 180px;
   width: auto;
   justify-self: center;
+}
+
+
+/* ============================================
+   ТАБЛИЦА ТЕХ. ХАРАКТЕРИСТИК
+   ============================================ */
+.specs {
+  padding: 20px 0 80px;
+}
+
+.specs__scroll {
+  overflow-x: auto; /* на узких экранах таблица скроллится, а не ломает вёрстку */
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.spec-table th,
+.spec-table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.spec-table th {
+  width: 50%;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.spec-table td {
+  color: var(--color-muted);
+}
+
+.spec-table tr:last-child th,
+.spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.specs__note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--color-muted);
 }
 
 
@@ -465,6 +513,11 @@ a {
   }
 
   .features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Карточки продукции: текст и фото в столбик, а не рядом */
+  .card {
     grid-template-columns: 1fr;
   }
 
