@@ -360,6 +360,19 @@ a {
   color: var(--color-muted);
 }
 
+/* Многоколоночная таблица (сравнение моделей) — перебивает th width:50% */
+.spec-table--models th {
+  width: auto;
+}
+
+.spec-table--models td {
+  white-space: nowrap; /* числа не переносятся; при нехватке места таблица скроллится */
+}
+
+.spec-table--models thead th {
+  border-bottom: 2px solid var(--color-border);
+}
+
 
 /* ============================================
    КОНТАКТЫ — страница с кнопками
