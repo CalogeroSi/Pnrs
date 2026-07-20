@@ -409,6 +409,28 @@ a {
   margin-bottom: 20px;
 }
 
+.contact__phone {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contact__phone a {
+  color: var(--color-text);
+  transition: color 0.2s;
+}
+
+.contact__phone a:hover {
+  color: var(--color-accent);
+}
+
+/* QR-код WhatsApp — размер меняй здесь */
+.contact__qr {
+  width: 180px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
 
 .contact_grid {
   display: grid;
